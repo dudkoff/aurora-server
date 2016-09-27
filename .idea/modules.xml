@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/aurora.iml" filepath="$PROJECT_DIR$/.idea/modules/aurora.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/aurora_main.iml" filepath="$PROJECT_DIR$/.idea/modules/aurora_main.iml" group="aurora" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/aurora_test.iml" filepath="$PROJECT_DIR$/.idea/modules/aurora_test.iml" group="aurora" />
+    </modules>
+  </component>
+</project>
