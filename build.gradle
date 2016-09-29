@@ -18,4 +18,5 @@ dependencies {
     compile 'com.fasterxml.jackson.core:jackson-core:2.8.3'
     compile 'javax.servlet:javax.servlet-api:3.0.1'
     compile 'javax.servlet:jstl:1.2'
+    compile group: 'org.webjars', name: 'jquery', version: '2.1.4'
 }

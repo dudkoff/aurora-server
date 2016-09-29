@@ -12,8 +12,7 @@ public class NoteService {
     private Map<Long, Note> notes = NoteStorage.getNotes();
 
     public NoteService() {
-        notes.put(1L, new Note(1L, "Don't forget to make second note", "dudkoff"));
-        notes.put(2L, new Note(2L, "I didn't", "dudkoff"));
+        notes.put(1L, new Note(1L, "You can create new notes by calling /post and giving a JOSN, delete notes by calling /delete/{id} or view all notes /all", "System"));
     }
 
     public List<Note> getAllNotes(){

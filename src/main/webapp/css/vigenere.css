@@ -1,0 +1,19 @@
+body{
+    position: absolute;
+    text-align: center;
+}
+
+#vigenere_header {
+    margin-top: 50px;
+    font-size: 35px;
+    font-family: "Georgia", Georgia, serif;
+    color: #00849d;
+}
+
+.floating-box {
+    display: inline-block;
+    margin: 10px;
+    font-size: 20px;
+    font-family: "Georgia", Georgia, serif;
+    color: black;
+}
