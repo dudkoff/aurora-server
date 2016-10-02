@@ -13,6 +13,8 @@ public class NoteService {
 
     public NoteService() {
         notes.put(1L, new Note(1L, "You can create new notes by calling /post and giving a JOSN, delete notes by calling /delete/{id} or view all notes /all", "System"));
+        notes.put(2L, new Note(2L, "Test1", "System1"));
+        notes.put(3L, new Note(3L, "Test2", "System2"));
     }
 
     public List<Note> getAllNotes(){

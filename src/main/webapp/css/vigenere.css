@@ -1,18 +1,28 @@
-body{
+body .vigenere_body{
     position: absolute;
     text-align: center;
 }
 
-#vigenere_header {
-    margin-top: 50px;
+.vigenere_header {
     font-size: 35px;
-    font-family: "Georgia", Georgia, serif;
+    margin-top: 60px;
+    margin-left: 10px;
+    font-family: "Times New Roman", Times, serif, bold;
     color: #00849d;
 }
 
-.floating-box {
+.notes_header {
+    font-size: 35px;
+    margin-top: 60px;
+    margin-left: 10px;
+    font-family: "Times New Roman", Times, serif, bold;
+    color: #00849d;
+}
+
+div .floating {
     display: inline-block;
     margin: 10px;
+    margin-left: 30px;
     font-size: 20px;
     font-family: "Georgia", Georgia, serif;
     color: black;
