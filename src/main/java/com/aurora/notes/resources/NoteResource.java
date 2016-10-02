@@ -17,12 +17,12 @@ public class NoteResource {
 
     NoteService noteService = new NoteService();
 
-    @RequestMapping(value = {"/all", "/all/"}, method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
+    @RequestMapping(value = {"/all", "/all/"}, method = RequestMethod.GET, produces = "application/json")
     public  @ResponseBody List<Note> getAllNotes() {
         return noteService.getAllNotes();
     }
 
-    @RequestMapping(value = {"/post", "/post/"}, method = RequestMethod.POST, consumes = MediaType.APPLICATION_JSON_VALUE)
+    @RequestMapping(value = {"/post", "/post/"}, method = RequestMethod.POST, consumes = "application/json")
     public ResponseEntity<String> newNote(@RequestBody Note note) {
         noteService.newNote(note);
         return new ResponseEntity<>("New message added",HttpStatus.OK);

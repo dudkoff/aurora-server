@@ -1,4 +1,4 @@
-function refreshNotes() {
+$("#refresh").click(
     $( document ).ready(function() {
         var xhr = new XMLHttpRequest();
         xhr.onreadystatechange = function() {
@@ -17,17 +17,10 @@ function refreshNotes() {
                 $("#resultBox").text(notes);
             }
         }
-        xhr.open('GET', 'http://localhost:8080/notes/all', true);
+        xhr.open('GET', 'http://www.artemdudkov.com/aurora/notes/all', true);
         xhr.send(null);
-    });
-}
-
-$("#refresh").click($( document ).ready(function() {
-   refreshNotes();
-}));
-
-
-
+    })
+);
 
 $("#addNotes").click(function() {
     var xhr = new XMLHttpRequest();
@@ -43,9 +36,9 @@ $("#addNotes").click(function() {
     } else if (author == ""){
         alert("No author. Please sign your note.");
     } else {
-        xhr.open('POST', 'http://localhost:8080/notes/post', true);
+        xhr.open('POST', 'http://www.artemdudkov.com/aurora/notes/post', true);
         xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
         xhr.send(JSON.stringify({text:text, author:author}));
+        location.reload();
     }
-    refreshNotes();
 });

@@ -3,7 +3,28 @@
 <head>
     <script src="../jscript/notesApi.js"></script>
     <script>
-       refreshNotes();
+        $( document ).ready(function() {
+            var xhr = new XMLHttpRequest();
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState == XMLHttpRequest.DONE) {
+                    var response = xhr.responseText.substring(1, xhr.responseText.length-1);
+                    response = response.split("},");
+                    var  notes = "";
+                    for (i in response) {
+                        if (response[i][response[i].length-1] != "}") {
+                            var note = JSON.parse(response[i] + "}");
+                        } else {
+                            var note = JSON.parse(response[i]);
+                        }
+                        notes += note.author + ":    " + note.text + "\n____________________________________________________________\n\n";
+                    }
+                    $("#resultBox").text(notes);
+                }
+            }
+            // xhr.open('GET', 'http://www.artemdudkov.com/aurora/notes/all', true);
+            xhr.open('GET', 'http://www.artemdudkov.com/aurora/notes/all', true);
+            xhr.send(null);
+        });
     </script>
 </head>
 <body class="vigenere_body">
