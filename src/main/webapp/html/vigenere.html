@@ -8,6 +8,7 @@
             xhr.onreadystatechange = function() {
                 if (xhr.readyState == XMLHttpRequest.DONE) {
                     var response = xhr.responseText.substring(1, xhr.responseText.length-1);
+                    alert("head. response: " + response);
                     response = response.split("},");
                     var  notes = "";
                     for (i in response) {
@@ -21,8 +22,8 @@
                     $("#resultBox").text(notes);
                 }
             }
-            // xhr.open('GET', 'http://www.artemdudkov.com/aurora/notes/all', true);
-            xhr.open('GET', 'http://www.artemdudkov.com/aurora/notes/all', true);
+//            xhr.open('GET', 'http://localhost:8080/notes/all', true);
+            xhr.open('GET', 'http://www.artemdudkov.com:8080/aurora/notes/all', true);
             xhr.send(null);
         });
     </script>
