@@ -15,6 +15,8 @@ $("#addNotes").click(function() {
     text = $("#newNote").val();
     author = $("#author").val();
 
+    localStorage.setItem("author", author);
+
     if(text == "") {
         alert("Note is empty!");
     } else if (author == ""){
@@ -25,7 +27,10 @@ $("#addNotes").click(function() {
         xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
         xhr.send(JSON.stringify({text:text, author:author}));
         console.log("note added");
-        updateResultBox();
+
+        location.reload();
+
+
         $("#newNote").val("");
         console.log("result is UPDATED");
     }
@@ -47,6 +52,7 @@ function updateResultBox() {
                 notes += note.author + ":    " + note.text + "\n____________________________________________________________\n\n";
             }
             $("#resultBox").text(notes);
+            $("#author").val(localStorage.getItem("author"));
         }
     }
     // xhr.open('GET', 'http://localhost:8080/notes/all', true);
