@@ -1,31 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <script src="../jscript/notesApi.js"></script>
+    <script src="jscript/notesApi.js"></script>
     <script>
-        $( document ).ready(function() {
-            var xhr = new XMLHttpRequest();
-            xhr.onreadystatechange = function() {
-                if (xhr.readyState == XMLHttpRequest.DONE) {
-                    var response = xhr.responseText.substring(1, xhr.responseText.length-1);
-                    alert("head. response: " + response);
-                    response = response.split("},");
-                    var  notes = "";
-                    for (i in response) {
-                        if (response[i][response[i].length-1] != "}") {
-                            var note = JSON.parse(response[i] + "}");
-                        } else {
-                            var note = JSON.parse(response[i]);
-                        }
-                        notes += note.author + ":    " + note.text + "\n____________________________________________________________\n\n";
-                    }
-                    $("#resultBox").text(notes);
-                }
-            }
-//            xhr.open('GET', 'http://localhost:8080/notes/all', true);
-            xhr.open('GET', 'http://www.artemdudkov.com:8080/aurora/notes/all', true);
-            xhr.send(null);
-        });
+        $( document ).ready(updateResultBox());
     </script>
 </head>
 <body class="vigenere_body">
