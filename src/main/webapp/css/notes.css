@@ -1,22 +1,56 @@
 body .notes_body{
-    position: absolute;
+    position: relative;
     text-align: center;
+    min-width: 800px;
 }
 
-.notes_header {
-    font-size: 35px;
-    margin-top: 60px;
+
+div .left_half {
+    float: left;
+    position: relative;
+    min-width: 370px;
+    min-height: 300px;
+    margin-left: 20px;
+    margin-top: 15px;
+}
+
+div .right_half {
+    float: left;
+    min-width: 370px;
+    min-height: 300px;
     margin-left: 10px;
-    font-family: "Times New Roman", Times, serif, bold;
-    color: #00849d;
+    margin-top: 15px;
 }
 
 
-div .floating {
-    display: inline-block;
-    margin: 10px;
-    margin-left: 30px;
-    font-size: 20px;
+div #notes_header {
+    font-size: 35px;
+    margin-left: 40%;
+    font-family: "Times New Roman", Times, serif, bold;
+    color: black;
+}
+
+div #newNote_header {
+    font-size: 35px;
+    margin-left: 30%;
+    font-family: "Times New Roman", Times, serif, bold;
+    color: black;
+}
+
+#resultBox {
+    width: 40vw;
+    height: 70vh;
+    min-width: 400px;
+    font-size: 14px;
+    font-family: "Georgia", Georgia, serif;
+    color: black;
+}
+
+#newNote {
+    width: 40vw;
+    height: 30vh;
+    min-width: 200px;
+    font-size: 14px;
     font-family: "Georgia", Georgia, serif;
     color: black;
 }

@@ -8,28 +8,14 @@
 </head>
 <body class="notes_body">
 
-<!--
-<div class="floating">
-    <p class="vigenere_header">Breaking Vigenere Cipher<p/>
-    <p>Enter your text here</p>
-    <textarea rows = "10" cols = "80"></textarea>
-    <p>Result<p/>
-    <textarea disabled rows = "10" cols = "80"></textarea>
-    <p>Cipher Key:
-    <p>
-        <input type="text" id="cipherKey"><br>
-        <button id="encrypt" type="button">Encrypt</button>
-        <button id="decrypt" type="button"> HACK </button>
-    </p>
-    </p>
-</div>
--->
 
-<div class="floating">
-    <p class="notes_header">Notes Feed<p/>
-    <p>Notes Feed</p>
+<div class="left_half">
+    <div id="notes_header">Notes Feed</div>
     <textarea disabled id="resultBox" rows = "15" cols = "80"></textarea>
-    <p>New Note</p>
+</div>
+
+<div class="right_half">
+    <div id="newNote_header">New Note</div>
     <textarea id="newNote" rows = "5" cols = "80"></textarea>
     <p>Author
     <p>
@@ -39,5 +25,7 @@
     </p>
     </p>
 </div>
+
+
 </body>
 </html>
