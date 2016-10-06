@@ -1,17 +1,37 @@
 #bg {
-    position: fixed;
-    top: 0;
-    left: 0;
-
-    /* Preserve aspet ratio */
-    min-width: 100%;
-    min-height: 100%;
+    background-color: whitesmoke;
+    background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -webkit-background-size: cover;
+    min-width: 800px;
 }
 
-center {
+#header_image {
+    margin-top: -10px;
+    margin-left: -10px;
+    background: url('../images/bg2.jpg');
+    height: calc(90px + 1.5vw);
+    min-width: 110%;
+    z-index: -1;
+}
+
+#fire_image {
+    position: relative;
+    float: left;
+    width: calc(80px + 1.5vw);
+    height: calc(80px + 1.5vw);
+    margin-top: calc(1px - 87px - 1.5vw);
+}
+
+#welcome {
+    position: relative;
+    margin-top: calc(1px - 78px - 1.5vw);
+    margin-left: 80px;
     font-family: "Times New Roman", Times, serif;
-    font-size: 70px;
+    font-size: calc(50px + 1.5vw);
     color: ghostwhite;
 }
+
 
 
