@@ -15,15 +15,15 @@ $("#addNotes").click(function() {
     text = $("#newNote").val();
     author = $("#author").val();
 
-    localStorage.setItem("author", author);
+    sessionStorage.setItem("author", author);
 
     if(text == "") {
         alert("Note is empty!");
     } else if (author == ""){
         alert("No author. Please sign your note.");
     } else {
-        // xhr.open('POST', 'http://localhost:8080/notes/post', true);
-        xhr.open('POST', 'http://www.artemdudkov.com:8080/aurora/notes/post', true);
+        var url = window.location.href + "/notes/post";
+        xhr.open('POST', url, true);
         xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
         xhr.send(JSON.stringify({text:text, author:author}));
         console.log("note added");
@@ -52,11 +52,11 @@ function updateResultBox() {
                 notes += note.author + ":    " + note.text + "\n____________________________________________________________\n\n";
             }
             $("#resultBox").text(notes);
-            $("#author").val(localStorage.getItem("author"));
+            $("#author").val(sessionStorage.getItem("author"));
         }
     }
-    // xhr.open('GET', 'http://localhost:8080/notes/all', true);
-    xhr.open('GET', 'http://www.artemdudkov.com:8080/aurora/notes/all', true);
+    var url = window.location.href + "/notes/all";
+    xhr.open('GET', url, true);
     xhr.send(null);
     console.log("resultbox is SET");
 }
