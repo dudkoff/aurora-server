@@ -1,7 +1,7 @@
 body .notes_body{
     position: relative;
     text-align: center;
-    min-width: 800px;
+    min-width: 880px;
 }
 
 
@@ -22,7 +22,6 @@ div .right_half {
     margin-top: 15px;
 }
 
-
 div #notes_header {
     font-size: 35px;
     margin-left: 40%;
@@ -37,6 +36,18 @@ div #newNote_header {
     color: black;
 }
 
+div #author_header {
+    font-size: 18px;
+    margin-left: 15px;
+    margin-top: 10px;
+    font-family: "Times New Roman", Times, serif, bold;
+    color: black;
+}
+
+input #author_buttons {
+    margin-top: 2px;
+}
+
 #resultBox {
     width: 40vw;
     height: 70vh;
@@ -49,7 +60,7 @@ div #newNote_header {
 #newNote {
     width: 40vw;
     height: 30vh;
-    min-width: 200px;
+    min-width: 400px;
     font-size: 14px;
     font-family: "Georgia", Georgia, serif;
     color: black;
